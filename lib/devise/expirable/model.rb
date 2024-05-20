@@ -2,7 +2,7 @@ require 'devise/strategies/database_authenticatable'
 
 module Devise
   module Models
-    module PasswordExpirable
+    module Expirable
       extend ActiveSupport::Concern
 
       included do
