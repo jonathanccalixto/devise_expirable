@@ -1,0 +1,4 @@
+en:
+  devise:
+    failure:
+      password_expired: "Invalid %{authentication_keys} or password."
