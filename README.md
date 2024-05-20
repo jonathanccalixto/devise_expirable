@@ -6,7 +6,7 @@ This is a simple, however wonderful devise extension to expire user password aft
 
 Add this line to your application's Gemfile:
 
-    gem 'devise_password_expiratable'
+    gem 'devise_expirable'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install devise_password_expiratable
+    $ gem install devise_expirable
 
 ## Usage
 
@@ -45,7 +45,7 @@ Or install it yourself as:
 #### Using with ActiveRecord
 You need to create a migration, manually (there is no magic here):
 
-    class DevisePasswordExpirableToUsers < ActiveRecord::Migration
+    class DeviseExpirableToUsers < ActiveRecord::Migration
       def up
         add_column :users, :expiration_password_at, :timestamp
         add_index :users, :expiration_password_at
@@ -59,7 +59,7 @@ You need to create a migration, manually (there is no magic here):
 
 or
 
-    class DevisePasswordExpirableToUsers < ActiveRecord::Migration
+    class DeviseExpirableToUsers < ActiveRecord::Migration
       def change
         change_table :users, bulk: true do |t|
           t.datetime :expiration_password_at
@@ -72,7 +72,7 @@ or
 Include in your model:
 
     class User < ActiveRecord::Base
-      devise :database_authentication, :password_expirable
+      devise :database_authentication, :expirable
     end
 
 Adding two wonderful new public methods:
@@ -96,14 +96,14 @@ And add a devise configuration:
 
 ## License
 
-The devise_password_expirable is hosted on Github: https://github.com/jonathanccalixto/devise_password_expirable, where your contributions, forkings, comments and feedback are greatly welcomed.
+The devise_expirable is hosted on Github: https://github.com/jonathanccalixto/devise_expirable, where your contributions, forkings, comments and feedback are greatly welcomed.
 
 Copyright (c) 2024 Yanotec, released under the MIT license.
 
 
 ## Contributing
 
-1. Fork it ( http://github.com/jonathanccalixto/devise_password_expirable/fork )
+1. Fork it ( http://github.com/jonathanccalixto/devise_expirable/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

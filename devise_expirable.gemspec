@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'devise/password_expirable/version'
+require 'devise/expirable/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "devise_password_expirable"
-  spec.version       = DevisePasswordExpirable::VERSION
+  spec.name          = "devise_expirable"
+  spec.version       = DeviseExpirable::VERSION
   spec.authors       = ["Jonathan C. Calixto"]
   spec.email         = ["jonathanccalixto@gmail.com"]
   spec.summary       = %q{Expires user password after a period}
   spec.description   = %q{This is a simple, however wonderful devise extension to expire user password.}
-  spec.homepage      = "https://github.com/jonathanccalixto/devise_password_expirable"
+  spec.homepage      = "https://github.com/jonathanccalixto/devise_expirable"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
